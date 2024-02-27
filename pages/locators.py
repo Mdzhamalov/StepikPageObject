@@ -15,3 +15,8 @@ class LoginPageLocators:
     CONFIRM_PASSWORD_REGISTER = (By.XPATH, "//div/input[@name='registration-password2']")
     REGISTER_SUBMIT = (By.XPATH, "//button[@name='registration_submit']")
 
+
+class ProductPageLocators:
+    ADD_TO_BASKET = (By.XPATH, "//button[@value = 'Add to basket']")
+    PRODUCT_TITLE = (By.XPATH, "//h1[contains(text(), 'The shellcoder's handbook')]")
+    ALERT_PRODUCT_TITLE = (By.XPATH, "//strong[contains(text(), 'The shellcoder's handbook')]")
