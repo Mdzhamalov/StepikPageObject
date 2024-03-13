@@ -1,6 +1,4 @@
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
 
 
 class MainPageLocators:
@@ -21,7 +19,7 @@ class LoginPageLocators:
 class ProductPageLocators:
     ADD_TO_BASKET = (By.XPATH, "//button[@value = 'Add to basket']")
     PRODUCT_TITLE = (By.XPATH, "//div[contains(@class, 'product_main')]/h1")
-    REAL_PRODUCT_TITLE = (By.XPATH, "//div[@class = 'alertinner ']/strong")
+    SUCCESS_MESSAGE = (By.XPATH, "//div[@class = 'alertinner ']/strong")
     PRODUCT_PRICE = (By.XPATH, "//div[contains(@class, 'product_main')]/p[@class = 'price_color']")
     REAL_PRODUCT_PRICE = (By.XPATH, "//div[@class = 'alertinner ']/p/strong")
 
