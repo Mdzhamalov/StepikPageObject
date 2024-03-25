@@ -21,3 +21,9 @@ class LoginPage(BasePage):
     def should_be_register_form(self):
         assert self.browser.find_element(*LoginPageLocators.CONFIRM_PASSWORD_REGISTER), \
             "There is no field 'Confirm password'"
+
+    def register_new_user(self, email, password):
+        self.browser.find_element(*LoginPageLocators.EMAIL_ADDRESS_REGISTER).send_keys(email)
+        self.browser.find_element(*LoginPageLocators.PASSWORD_REGISTER).send_keys(password)
+        self.browser.find_element(*LoginPageLocators.CONFIRM_PASSWORD_REGISTER).send_keys(password)
+        self.browser.find_element(*LoginPageLocators.REGISTER_SUBMIT).click()
